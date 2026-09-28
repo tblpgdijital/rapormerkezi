@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1,viewport-fit=cover"
+  >
+
+  <meta name="theme-color" content="#082f49">
+
+  <title>
+    TUI BLUE Palm Garden | Rapor Merkezi
+  </title>
+
+  <style>
+    html,
+    body {
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      background:#f4f7fb;
+    }
+
+    #app {
+      position:fixed;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+      margin:0;
+      padding:0;
+      display:block;
+      background:#f4f7fb;
+    }
+
+    #loading {
+      position:fixed;
+      inset:0;
+      z-index:10;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #082f49,
+          #0c4a6e
+        );
+
+      color:white;
+
+      font-family:
+        Arial,
+        sans-serif;
+    }
+
+    .loader {
+      text-align:center;
+    }
+
+    .icon {
+      width:64px;
+      height:64px;
+
+      margin:0 auto 18px;
+
+      border-radius:20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      background:
+        rgba(255,255,255,.12);
+
+      font-size:30px;
+    }
+
+    .title {
+      font-size:20px;
+      font-weight:700;
+    }
+
+    .text {
+      margin-top:7px;
+      font-size:12px;
+      opacity:.65;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="loading">
+    <div class="loader">
+
+      <div class="icon">
+        ▥
+      </div>
+
+      <div class="title">
+        Rapor Merkezi
+      </div>
+
+      <div class="text">
+        Sistem hazırlanıyor...
+      </div>
+
+    </div>
+  </div>
+
+
+  <iframe
+    id="app"
+    title="TUI BLUE Palm Garden Rapor Merkezi"
+    allow="fullscreen"
+    src="https://script.google.com/macros/s/AKfycbwY22zck2okO3HqEI9oCoI3otCxj9xg_g8gFSm76NQnRO2Z4uIlY0UI6wHYPCR9Ghk0Aw/exec"
+  ></iframe>
+
+
+  <script>
+
+    const frame =
+      document.getElementById("app");
+
+    const loading =
+      document.getElementById("loading");
+
+
+    frame.addEventListener(
+      "load",
+      function () {
+
+        setTimeout(
+          function () {
+
+            loading.style.display =
+              "none";
+
+          },
+          250
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
